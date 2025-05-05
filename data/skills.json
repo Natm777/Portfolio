@@ -1,18 +1,18 @@
 [
     {
-        "image": "html-css.jpg",
+        "image": "html-css.webp",
         "title": "HTML - CSS",
         "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS",
         "category": "developpement"
     },
     {
-        "image": "js.jpg",
+        "image": "js.webp",
         "title": "JavaScript",
         "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires",
         "category": "developpement"
     },
     {
-        "image": "react.jpg",
+        "image": "react.webp",
         "title": "React",
         "text": "Création d’applications React, création de composants et manipulation de leur état",
         "category": "developpement"
@@ -32,19 +32,19 @@
         "category": "test"
     },
     {
-        "image": "cypress.png",
+        "image": "cypress.webp",
         "title": "Cypress",
         "text": "Automatisation de tests end-to-end sur interfaces web.",
         "category": "test"
     },
     {
-        "image": "cucumber.png",
+        "image": "cucumber.webp",
         "title": "Cucumber",
         "text": "Définition de scénarios de test BDD avec Gherkin.",
         "category": "test"
     },
     {
-        "image": "outils-projet.png",
+        "image": "outils.webp",
         "title": "Outils projet",
         "text": "Utilisation de Git, Figma, Jira et Notion pour la gestion, la version et la collaboration en QA.",
         "category": "outils"
