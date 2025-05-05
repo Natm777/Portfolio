@@ -24,67 +24,87 @@ function handleNavbarScroll() {
   }
   
   // Function to dynamically create HTML elements from the JSON file
-  function createSkillsFromJSON() {
-    const container = document.querySelector("#skills .container");
-    const filterContainer = document.getElementById("filter-buttons");
-    let row = document.createElement("div");
-    row.classList.add("row");
-  
-    fetch("data/skills.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const categories = new Set();
-  
-        data.forEach((item, index) => {
-          // Collecter les catégories
-          categories.add(item.category);
-  
-          // Créer la carte
-          const card = document.createElement("div");
-          card.classList.add("col-lg-4", "mt-4");
-          card.innerHTML = `
-            <div class="card skillsText" data-category="${item.category}">
-              <div class="card-body">
-                <img src="./images/${item.image}" alt="${item.title}" loading="lazy" />
-                <h3 class="card-title mt-3">${item.title}</h3>
-                <p class="card-text mt-3">${item.text}</p>
-              </div>
+ function createSkillsFromJSON() {
+  const container = document.querySelector("#skills .container");
+  const filterContainer = document.getElementById("filter-buttons");
+  let allCards = []; // ← stockage de toutes les cartes
+
+  fetch("data/skills.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const categories = new Set();
+
+      data.forEach((item) => {
+        categories.add(item.category);
+
+        const col = document.createElement("div");
+        col.classList.add("col-lg-4", "mt-4");
+
+        col.innerHTML = `
+          <div class="card skillsText" data-category="${item.category}">
+            <div class="card-body">
+              <img src="./images/${item.image}" alt="${item.title}" loading="lazy" />
+              <h3 class="card-title mt-3">${item.title}</h3>
+              <p class="card-text mt-3">${item.text}</p>
             </div>
-          `;
-          row.appendChild(card);
-  
-          if ((index + 1) % 3 === 0 || index === data.length - 1) {
-            container.appendChild(row);
-            row = document.createElement("div");
-            row.classList.add("row");
-          }
-        });
-  
-        // Créer les boutons de filtre
-        let buttonHTML = `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Tout</button>`;
-        categories.forEach((cat) => {
-          const label = cat.charAt(0).toUpperCase() + cat.slice(1);
-          buttonHTML += `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="${cat}">${label}</button>`;
-        });
-        filterContainer.innerHTML = buttonHTML;
-  
-        // Ajouter le comportement au clic
-        document.querySelectorAll(".filter-btn").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const filter = btn.getAttribute("data-filter");
-            document.querySelectorAll(".skillsText").forEach((card) => {
-              const category = card.getAttribute("data-category");
-              if (filter === "all" || category === filter) {
-                card.classList.remove("hidden");
-              } else {
-                card.classList.add("hidden");
-              }
-            });
-          });
+          </div>
+        `;
+
+        allCards.push(col); // ← stocker chaque carte
+      });
+
+      // Boutons de filtre
+      let btns = `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Tout</button>`;
+      categories.forEach(cat => {
+        const label = cat.charAt(0).toUpperCase() + cat.slice(1);
+        btns += `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="${cat}">${label}</button>`;
+      });
+      filterContainer.innerHTML = btns;
+
+      // Affichage initial (tout)
+      displayCards("all");
+
+      // Filtrage dynamique
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+          displayCards(filter);
         });
       });
-  }
-  
+
+      // Fonction qui recrée les rows sans vide
+      function displayCards(filter) {
+        // Supprimer les anciennes lignes
+        const oldRows = container.querySelectorAll(".row");
+        oldRows.forEach(row => row.remove());
+
+        let newRow = document.createElement("div");
+        newRow.classList.add("row");
+        let count = 0;
+
+        allCards.forEach(col => {
+          const category = col.querySelector(".skillsText").getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            newRow.appendChild(col.cloneNode(true));
+            count++;
+
+            if (count % 3 === 0) {
+              container.appendChild(newRow);
+              newRow = document.createElement("div");
+              newRow.classList.add("row");
+            }
+          }
+        });
+
+        // Ajouter la dernière ligne même si incomplète
+        if (newRow.children.length > 0) {
+          container.appendChild(newRow);
+        }
+      }
+    });
+}
+
   // Function to dynamically create HTML elements from the JSON file
   function createPortfolioFromJSON() {
     const container = document.querySelector("#portfolio .container");

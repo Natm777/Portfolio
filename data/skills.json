@@ -7,7 +7,7 @@
     },
     {
         "image": "js.jpg",
-        "title": "javascript",
+        "title": "JavaScript",
         "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires",
         "category": "developpement"
     },
@@ -17,22 +17,36 @@
         "text": "Création d’applications React, création de composants et manipulation de leur état",
         "category": "developpement"
     },
+    
     {
-        "image": "gestion-de-projet.png",
-        "title": "Gestion de projet",
-        "text": "Analyse des besoins d’un client, définition d’une solution technique répondant aux besoins fonctionnelle, planification du projet",
-        "category": "organisation"
+        "image": "exploratoire.png",
+        "title": "Exécution des tests",
+        "text": "Réalisation de tests fonctionnels manuels, exploratoires et de non régression.",
+        "category": "test"
     },
+    
     {
-        "image": "optimisation-et-debug.png",
-        "title": "Optimisation et debug",
-        "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et performance et publication d’un site en ligne",
+        "image": "revue-exigences.png",
+        "title": "Documentation de test",
+        "text": "Rédaction de livrables QA : cahier de recette, bilan de campagne et revue d’exigences.",
         "category": "test"
     },
     {
-        "image": "test.png",
-        "title": "Test",
-        "title ": "Tests exploratoires, unitaires et d’intégration, définition d’une stratégie de test et d’un rédaction d’un cahier de recette, automatisation de tests E2E et d’API",
+        "image": "cypress.png",
+        "title": "Cypress",
+        "text": "Automatisation de tests end-to-end sur interfaces web.",
         "category": "test"
-    }
+    },
+    {
+        "image": "cucumber.png",
+        "title": "Cucumber",
+        "text": "Définition de scénarios de test BDD avec Gherkin.",
+        "category": "test"
+    },
+    {
+        "image": "outils-projet.png",
+        "title": "Outils projet",
+        "text": "Utilisation de Git, Figma, Jira et Notion pour la gestion, la version et la collaboration en QA.",
+        "category": "outils"
+      }
 ]
