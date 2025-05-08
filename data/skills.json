@@ -19,7 +19,7 @@
     },
     
     {
-        "image": "exploratoire.png",
+        "image": "exploratoire.webp",
         "title": "Exécution des tests",
         "text": "Réalisation de tests fonctionnels manuels, exploratoires et de non régression.",
         "category": "test"
