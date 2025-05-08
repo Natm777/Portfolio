@@ -2,19 +2,22 @@
     {
         "image": "image1.webp",
         "title": "Booki",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "text": "Lore Ipsum is simply dummy text of the printing and typesetting industry.",
+        "link": "#",
+        "technos": "HTML, CSS"
     },
     {
         "image": "image2.webp",
         "title": "Mon Vieux grimoire",
         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "link": "#",
+        "technos": "HTML, CSS"
     },
     {
         "image": "image3.webp",
         "title": "Kasa",
         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "link": "#",
+        "technos": "HTML, CSS"
     }
 ]

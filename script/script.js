@@ -107,41 +107,30 @@ function handleNavbarScroll() {
 
   // Function to dynamically create HTML elements from the JSON file
   function createPortfolioFromJSON() {
-    const container = document.querySelector("#portfolio .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
-  
-    // Load the JSON file
+    const carouselInner = document.querySelector("#portfolioCarousel .carousel-inner");
     fetch("data/portfolio.json")
       .then((response) => response.json())
       .then((data) => {
-        // Iterate through the JSON data and create HTML elements
         data.forEach((item, index) => {
-          const card = document.createElement("div");
-          card.classList.add("col-lg-4", "mt-4");
-          card.innerHTML = `
-                      <div class="card portfolioContent">
-                      <img class="card-img-top" src="images/${item.image}" alt="Projet ${item.title}" loading="lazy" style="width:100%">
-                      <div class="card-body">
-                          <h3 class="card-title">${item.title}</h3>
-                          <p class="card-text">${item.text}</p>
-                          <div class="text-center">
-                              <a href="${item.link}" class="btn btn-success">Lien</a>
-                          </div>
-                      </div>
-                  </div>
-                  `;
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("carousel-item");
+          if (index === 0) carouselItem.classList.add("active");
   
-          // Append the card to the current row
-          row.appendChild(card);
-          
+          carouselItem.innerHTML = `
+            <div class="d-flex justify-content-center">
+              <div class="portfolio-card" style="width: 70vw; height: 400px;">
+                <img src="images/${item.image}" alt="${item.title}" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <h3>${item.title}</h3>
+                  <p><strong>Technos :</strong> ${item.technos || "Non spécifié"}</p>
+                  <p>${item.text}</p>
+                  <a href="${item.link}" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          `;
   
-          // If the index is a multiple of 3 or it's the last element, create a new row
-          if ((index + 1) % 3 === 0 || index === data.length - 1) {
-            container.appendChild(row);
-            row = document.createElement("div");
-            row.classList.add("row");
-          }
+          carouselInner.appendChild(carouselItem);
         });
       });
   }
