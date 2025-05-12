@@ -255,17 +255,29 @@ footer a:hover {
 {
     .hero_title {
       font-size: 1.8rem;
+      margin-top: 50px;
+      padding-left: 20px;
     }
   
     .hero_desc {
       font-size: 1rem;
+      margin-top: 5px;
+      padding-left: 20px;
     }
 
 
     .imageHome {
-        display:none;
+        width: 90%;
+        height: auto;
+        border-radius: 50%;
      }
 
+     
+     .align-items-center {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    
   }
 
  
