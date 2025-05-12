@@ -131,9 +131,16 @@ function createPortfolioFromJSON() {
         carouselItem.innerHTML = `
             <div class="d-flex justify-content-center">
               <div class="portfolio-card" style="width: 70vw; height: 400px;">
-                <img src="images/${item.image}" alt="${
-          item.title
-        }" class="img-fluid">
+                <img 
+                src="images/${item.image.replace(".webp", "-1024.webp")}" 
+                srcset="
+                images/${item.image.replace(".webp", "-640.webp")} 640w,
+                images/${item.image.replace(".webp", "-1024.webp")} 1024w,
+                images/${item.image.replace(".webp", "-1600.webp")} 1600w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 80vw, 70vw"
+                alt="${item.title}" 
+                class="img-fluid"
+                loading="lazy">
                 <div class="portfolio-overlay">
                   <h3>${item.title}</h3>
                   <p><strong>Technos :</strong> ${
