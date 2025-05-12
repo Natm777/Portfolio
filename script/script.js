@@ -1,30 +1,30 @@
 // Function to add the "navbarDark" class to the navbar on scroll
 function handleNavbarScroll() {
-    const header = document.querySelector(".navbar");
-    window.onscroll = function () {
-      const top = window.scrollY;
-      if (top >= 100) {
-        header.classList.add("navbarDark");
-      } else {
-        header.classList.remove("navbarDark");
-      }
-    };
-  }
-  
-  // Function to handle navbar collapse on small devices after a click
-  function handleNavbarCollapse() {
-    const navLinks = document.querySelectorAll(".nav-item");
-    const menuToggle = document.getElementById("navbarSupportedContent");
-  
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        new bootstrap.Collapse(menuToggle).toggle();
-      });
+  const header = document.querySelector(".navbar");
+  window.onscroll = function () {
+    const top = window.scrollY;
+    if (top >= 100) {
+      header.classList.add("navbarDark");
+    } else {
+      header.classList.remove("navbarDark");
+    }
+  };
+}
+
+// Function to handle navbar collapse on small devices after a click
+function handleNavbarCollapse() {
+  const navLinks = document.querySelectorAll(".nav-item");
+  const menuToggle = document.getElementById("navbarSupportedContent");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      new bootstrap.Collapse(menuToggle).toggle();
     });
-  }
-  
-  // Function to dynamically create HTML elements from the JSON file
- function createSkillsFromJSON() {
+  });
+}
+
+// Function to dynamically create HTML elements from the JSON file
+function createSkillsFromJSON() {
   const container = document.querySelector("#skills .container");
   const filterContainer = document.getElementById("filter-buttons");
   let allCards = []; // ← stockage de toutes les cartes
@@ -43,7 +43,15 @@ function handleNavbarScroll() {
         col.innerHTML = `
           <div class="card skillsText" data-category="${item.category}">
             <div class="card-body">
-              <img src="./images/${item.image}" alt="${item.title}" loading="lazy" />
+              <img 
+              src="./images/${item.image.replace(".webp", "-400.webp")}" 
+               srcset="
+              ./images/${item.image.replace(".webp", "-200.webp")} 200w,
+              ./images/${item.image.replace(".webp", "-400.webp")} 400w,
+              ./images/${item.image.replace(".webp", "-600.webp")} 600w"
+              sizes="(max-width: 576px) 200px, (max-width: 992px) 400px, 600px"
+               alt="${item.title}" 
+                loading="lazy" />
               <h3 class="card-title mt-3">${item.title}</h3>
               <p class="card-text mt-3">${item.text}</p>
             </div>
@@ -55,7 +63,7 @@ function handleNavbarScroll() {
 
       // Boutons de filtre
       let btns = `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Tout</button>`;
-      categories.forEach(cat => {
+      categories.forEach((cat) => {
         const label = cat.charAt(0).toUpperCase() + cat.slice(1);
         btns += `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="${cat}">${label}</button>`;
       });
@@ -76,14 +84,16 @@ function handleNavbarScroll() {
       function displayCards(filter) {
         // Supprimer les anciennes lignes
         const oldRows = container.querySelectorAll(".row");
-        oldRows.forEach(row => row.remove());
+        oldRows.forEach((row) => row.remove());
 
         let newRow = document.createElement("div");
         newRow.classList.add("row");
         let count = 0;
 
-        allCards.forEach(col => {
-          const category = col.querySelector(".skillsText").getAttribute("data-category");
+        allCards.forEach((col) => {
+          const category = col
+            .querySelector(".skillsText")
+            .getAttribute("data-category");
 
           if (filter === "all" || category === filter) {
             newRow.appendChild(col.cloneNode(true));
@@ -105,38 +115,46 @@ function handleNavbarScroll() {
     });
 }
 
-  // Function to dynamically create HTML elements from the JSON file
-  function createPortfolioFromJSON() {
-    const carouselInner = document.querySelector("#portfolioCarousel .carousel-inner");
-    fetch("data/portfolio.json")
-      .then((response) => response.json())
-      .then((data) => {
-        data.forEach((item, index) => {
-          const carouselItem = document.createElement("div");
-          carouselItem.classList.add("carousel-item");
-          if (index === 0) carouselItem.classList.add("active");
-  
-          carouselItem.innerHTML = `
+// Function to dynamically create HTML elements from the JSON file
+function createPortfolioFromJSON() {
+  const carouselInner = document.querySelector(
+    "#portfolioCarousel .carousel-inner"
+  );
+  fetch("data/portfolio.json")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((item, index) => {
+        const carouselItem = document.createElement("div");
+        carouselItem.classList.add("carousel-item");
+        if (index === 0) carouselItem.classList.add("active");
+
+        carouselItem.innerHTML = `
             <div class="d-flex justify-content-center">
               <div class="portfolio-card" style="width: 70vw; height: 400px;">
-                <img src="images/${item.image}" alt="${item.title}" class="img-fluid">
+                <img src="images/${item.image}" alt="${
+          item.title
+        }" class="img-fluid">
                 <div class="portfolio-overlay">
                   <h3>${item.title}</h3>
-                  <p><strong>Technos :</strong> ${item.technos || "Non spécifié"}</p>
+                  <p><strong>Technos :</strong> ${
+                    item.technos || "Non spécifié"
+                  }</p>
                   <p>${item.text}</p>
-                  <a href="${item.link}" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
+                  <a href="${
+                    item.link
+                  }" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
                 </div>
               </div>
             </div>
           `;
-  
-          carouselInner.appendChild(carouselItem);
-        });
+
+        carouselInner.appendChild(carouselItem);
       });
-  }
-  
-  // Call the functions to execute the code
-  handleNavbarScroll();
-  handleNavbarCollapse();
-  createSkillsFromJSON();
-  createPortfolioFromJSON();
+    });
+}
+
+// Call the functions to execute the code
+handleNavbarScroll();
+handleNavbarCollapse();
+createSkillsFromJSON();
+createPortfolioFromJSON();
