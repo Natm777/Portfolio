@@ -1,23 +1,23 @@
 [
-    {
-        "image": "image1.webp",
-        "title": "Booki",
-        "text": "Lore Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#",
-        "technos": "HTML, CSS"
-    },
-    {
-        "image": "image2.webp",
-        "title": "Mon Vieux grimoire",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#",
-        "technos": "HTML, CSS"
-    },
-    {
-        "image": "image3.webp",
-        "title": "Kasa",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#",
-        "technos": "HTML, CSS"
-    }
+  {
+    "image": "booki-main.webp",
+    "title": "Booki – Site de réservation d’hébergements",
+    "text": "Création d’un site responsive de réservation d’hébergements avec HTML5 et CSS3. Intégration conforme à une maquette Figma, optimisation de l’accessibilité et respect des bonnes pratiques WAVE.",
+    "link": "#",
+    "technos": "HTML5, CSS3, Accessibilité"
+  },
+  {
+    "image": "sophie-bluel-main.webp",
+    "title": "Mon Vieux Grimoire – Application de notation de livres",
+    "text": "Développement d’un backend Node.js complet avec Express et MongoDB. Mise en place de l’authentification, de la sécurité (OWASP), gestion d’une base de données et traitement des images avec Multer.",
+    "link": "#",
+    "technos": "Node.js, Express, MongoDB, JWT, Multer"
+  },
+  {
+    "image": "kasa-main.webp",
+    "title": "Kasa – Site de location en React",
+    "text": "Refonte complète d’un site en React.js en suivant une maquette Figma. Utilisation de composants dynamiques, gestion des routes avec React Router, intégration de fichiers JSON et animations CSS.",
+    "link": "#",
+    "technos": "React, React Router, SCSS"
+  }
 ]
