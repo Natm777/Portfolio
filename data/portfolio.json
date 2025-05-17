@@ -2,22 +2,32 @@
   {
     "image": "booki-main.webp",
     "title": "Booki – Site de réservation d’hébergements",
-    "text": "Création d’un site responsive de réservation d’hébergements avec HTML5 et CSS3. Intégration conforme à une maquette Figma, optimisation de l’accessibilité et respect des bonnes pratiques WAVE.",
-    "link": "#",
+    "text": "Création d’un site responsive de réservation d’hébergements avec HTML5 et CSS3. Intégration conforme à une maquette Figma",
+    "link": "https://github.com/Natm777/Projet_Booki",
     "technos": "HTML5, CSS3, Accessibilité"
   },
   {
     "image": "sophie-bluel-main.webp",
-    "title": "Mon Vieux Grimoire – Application de notation de livres",
-    "text": "Développement d’un backend Node.js complet avec Express et MongoDB. Mise en place de l’authentification, de la sécurité (OWASP), gestion d’une base de données et traitement des images avec Multer.",
-    "link": "#",
-    "technos": "Node.js, Express, MongoDB, JWT, Multer"
+    "title": "Sophie Bluel – Site d'architecte",
+    "text": "Développement d’une site  dynamique avec JavaScript, incluant une page de connexion admin et une modale d’upload média. Manipulation du DOM, gestion des événements et communication avec une API.",
+    "link": "https://github.com/Natm777/sophie-bluel",
+    "technos": "HTML5, CSS3, JavaScript, API, DOM"
   },
   {
     "image": "kasa-main.webp",
     "title": "Kasa – Site de location en React",
     "text": "Refonte complète d’un site en React.js en suivant une maquette Figma. Utilisation de composants dynamiques, gestion des routes avec React Router, intégration de fichiers JSON et animations CSS.",
-    "link": "#",
+    "link": "https://github.com/Natm777/Projet-Kasa",
     "technos": "React, React Router, SCSS"
+  },
+
+    {
+    "image": "ecobliss.webp",
+    "title": "Eco Bliss Bath - Site de vente en ligne",
+    "text": "Automatisation de tests fonctionnels critiques avec Cypress pour une boutique écoresponsable. Analyse des tests manuels, écriture de scripts en JavaScript et génération d’un rapport de validation.",
+    "link": "https://github.com/Natm777/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne-main",
+    "technos": "JavaScript, Cypress, QA, Test automatisé."
   }
 ]
+
+

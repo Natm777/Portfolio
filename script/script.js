@@ -89,7 +89,9 @@ function createSkillsFromJSON() {
         let count = 0;
 
         allCards.forEach((col) => {
-          const category = col.querySelector(".skillsText").getAttribute("data-category");
+          const category = col
+            .querySelector(".skillsText")
+            .getAttribute("data-category");
 
           if (filter === "all" || category === filter) {
             newRow.appendChild(col.cloneNode(true));
@@ -110,70 +112,111 @@ function createSkillsFromJSON() {
     });
 }
 
+// Fonction pour forcer le rechargement des images responsives
+function reloadResponsiveImages() {
+  const sources = document.querySelectorAll("img[srcset]");
+  sources.forEach((img) => {
+    const currentSrc = img.src;
+    img.src = "";
+    img.src = currentSrc;
+  });
+}
+
 // Carrousel dynamique (portfolio)
 function createPortfolioFromJSON() {
-  const carouselInner = document.querySelector("#portfolioCarousel .carousel-inner");
+  const carouselInner = document.querySelector(
+    "#portfolioCarousel .carousel-inner"
+  );
+  const cardsContainer = document.getElementById("portfolioCards");
+
   carouselInner.innerHTML = "";
+  cardsContainer.innerHTML = "";
 
   fetch("data/portfolio.json")
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((item, index) => {
-        const baseImage = item.image.replace(".webp", "");
+      const isDesktop = window.innerWidth >= 540;
 
-        const carouselItem = document.createElement("div");
-        carouselItem.classList.add("carousel-item");
-        if (index === 0) carouselItem.classList.add("active");
+      if (isDesktop) {
+        document.getElementById("portfolioCarousel").classList.remove("d-none");
+        cardsContainer.classList.add("d-none");
 
-        carouselItem.innerHTML = `
-          <div class="d-flex justify-content-center">
-            <div class="portfolio-card" style="width: 70vw; position: relative;">              
-            <img 
-                src="images/${baseImage}-1024.webp"
-                srcset="
-                  images/${baseImage}-640.webp 640w,
-                  images/${baseImage}-1024.webp 1024w,
-                  images/${baseImage}-1600.webp 1600w"
-                sizes="(max-width: 576px) 100vw, (max-width: 992px) 70vw, 50vw"
-                alt="${item.title}" 
-                class="img-fluid"
-                width="1024" height="600"
-                loading="lazy">
+        data.forEach((item, index) => {
+          const baseImage = item.image.replace(".webp", "");
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("carousel-item");
+          if (index === 0) carouselItem.classList.add("active");
 
-              <div class="portfolio-overlay">
-                <h3>${item.title}</h3>
-                <p><strong>Technos :</strong> ${item.technos || "Non spécifié"}</p>
-                <p>${item.text}</p>
-                <a href="${item.link}" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
+          carouselItem.innerHTML = `
+            <div class="d-flex justify-content-center">
+              <div class="portfolio-card" style="width: 70vw; position: relative;">
+                <img 
+                  src="images/${baseImage}-1024.webp"
+                  srcset="images/${baseImage}-640.webp 640w, images/${baseImage}-1024.webp 1024w, images/${baseImage}-1600.webp 1600w"
+                  sizes="(max-width: 576px) 100vw, (max-width: 992px) 70vw, 50vw"
+                  alt="${item.title}" class="img-fluid" loading="lazy">
+                <div class="portfolio-overlay">
+                  <h3>${item.title}</h3>
+                  <p><strong>Technos :</strong> ${
+                    item.technos || "Non spécifié"
+                  }</p>
+                  <p>${item.text}</p>
+                  <a href="${
+                    item.link
+                  }" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Diapositive précédente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Diapositive suivante">
+                  &#8250;
+                </button>
               </div>
+            </div>`;
+          carouselInner.appendChild(carouselItem);
+        });
+      } else {
+        document.getElementById("portfolioCarousel").classList.add("d-none");
+        cardsContainer.classList.remove("d-none");
+        cardsContainer.innerHTML = ""; // ✅ Nettoyage
 
-              <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Diapositive précédente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 16 16">
-                  <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                </svg>
-              </button>
-
-              <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Diapositive suivante">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 16 16">
-                  <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        `;
-
-        carouselInner.appendChild(carouselItem);
-      });
+        data.forEach((item) => {
+          const baseImage = item.image.replace(".webp", "");
+          const card = document.createElement("div");
+          card.className = "col-12 col-md-4 mb-4";
+          card.innerHTML = `
+      <div class="card portfolioContent h-100">
+        <img src="images/${baseImage}-640.webp" class="card-img-top" alt="${
+            item.title
+          }">
+        <div class="card-overlay">
+          <p><strong>Technos :</strong> ${item.technos || "Non spécifié"}</p>
+          <p>${item.text}</p>
+          <a href="${
+            item.link
+          }" class="btn btn-outline-light mt-2" target="_blank">Voir</a>
+        </div>
+      </div>`;
+          cardsContainer.appendChild(card);
+        });
+      }
     });
 }
 
-// Navigation carrousel
+// Boutons de navigation du carrousel
 function moveCarousel(direction) {
-  const carousel = document.querySelector('#portfolioCarousel');
-  const instance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
-
+  const carousel = document.querySelector("#portfolioCarousel");
+  const instance =
+    bootstrap.Carousel.getInstance(carousel) ||
+    new bootstrap.Carousel(carousel);
   direction === 1 ? instance.next() : instance.prev();
 }
+
+// Rafraîchit portfolio à chaque redimensionnement
+window.addEventListener("resize", () => {
+  createPortfolioFromJSON();
+  reloadResponsiveImages();
+});
 
 // Appels initiaux
 handleNavbarScroll();
