@@ -15,27 +15,44 @@
     <title>Portfolio Nataly Molina</title>
 
     <!-- 🎨 Feuille de style principale -->
-    <link rel="stylesheet" href="style.min.css" />
-    <style>
-      body {
-        font-family: "Orbitron", sans-serif;
-        background-color: #fff;
-        margin: 0;
-      }
+     <style>
+    body {
+      font-family: "Orbitron", sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-      .hero_title,
-      .hero_desc {
-        font-family: "Orbitron", sans-serif;
-        color: #1d3c35;
-      }
+    .hero_title,
+    .hero_desc,
+    .hero_text {
+      color: #1d3c35;
+      font-family: "Orbitron", sans-serif;
+    }
 
-      .imageHome {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        display: block;
-      }
-    </style>
+    .hero_title {
+      font-size: 3.2rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .hero_title .name-highlight {
+      font-weight: 700;
+      font-size: 4.2rem;
+      color: #317873;
+    }
+
+    .imageHome {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+    <link rel="stylesheet" href="style.css" />
+    
 
     <!-- 🧱 Bootstrap & FontAwesome différés -->
     <link
@@ -100,59 +117,48 @@
     </nav>
 
     <!-- main banner -->
-    <section class="bgimage py-5" id="home">
-      <div class="container">
-        <div class="row align-items-center pt-5 pt-lg-0">
-          <!-- Titre & sous-titre -->
-          <div
-            class="col-12 col-lg-6 px-4 mb-4 mb-lg-0 text-lg-start text-centre"
-            style="min-height: 50px"
-          >
-            <h1 class="hero_title mb-3">
-              Salut, moi c’est <span class="name-highlight">Nataly</span>
-            </h1>
-            <h2 class="hero_desc">
-              Je suis <span class="color-accent">testeuse logiciel</span>
-            </h2>
-          </div>
+   <section class="bgimage py-5" id="home">
+  <div class="container">
+    <div class="row align-items-center pt-5 pt-lg-0">
 
-          <!-- Image -->
-          <div
-            class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
-          >
-            <img
-              src="images/home.webp"
-              srcset="images/home-300.webp 300w, images/home-564.webp 564w"
-              sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
-              width="800"
-              height="800"
-              class="imageHome"
-              alt="Photo de testeur"
-              fetchpriority="high"
-            />
-          </div>
-
-          <!-- Texte & bouton -->
-          <div class="col-12 col-lg-6 px-4 text-lg-start text-centre">
-            <p class="hero_text">
-              Actuellement en alternance dans le domaine du test logiciel, je
-              renforce mes compétences en
-              <span class="highlight">assurance qualité</span>, tout en évoluant
-              dans des
-              <span class="highlight">environnements</span> professionnels
-              concrets et exigeants.
-              <a
-                href="images/CV_MOLINA_Nataly.png"
-                target="_blank"
-                class="btn btn-outline-dark mt-4"
-              >
-                Télécharger mon CV !
-              </a>
-            </p>
-          </div>
-        </div>
+      <!-- Texte & bouton AVANT -->
+      <div class="col-12 col-lg-6 px-4 text-lg-start text-centre mb-4 mb-lg-0">
+        <h1 class="hero_title">
+          Salut, moi c’est <span class="name-highlight">Nataly</span>
+        </h1>
+        <h2 class="hero_desc">
+          Je suis <span class="color-accent">testeuse logiciel</span>
+        </h2>
+        <p class="hero_text">
+          Actuellement en alternance dans le domaine du test logiciel, je
+          renforce mes compétences en
+          <span class="highlight">assurance qualité</span>, tout en évoluant
+          dans des
+          <span class="highlight">environnements</span> professionnels
+          concrets et exigeants.
+        </p>
+        <a href="images/CV_MOLINA_Nataly.png" target="_blank" class="btn btn-outline-dark mt-2">
+          Télécharger mon CV !
+        </a>
       </div>
-    </section>
+
+      <!-- Image APRÈS -->
+      <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0">
+        <img
+          src="images/home-300.webp"
+          srcset="images/home-300.webp 300w, images/home-564.webp 564w"
+          sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+          width="800"
+          height="800"
+          class="imageHome"
+          alt="Photo de testeur"
+          fetchpriority="high"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- skills section-->
     <section id="skills">
