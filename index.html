@@ -2,7 +2,6 @@
 <html lang="fr">
   <head>
     <!-- 🧠 Préconnexion (inutile ici si Orbitron est local, mais tu peux laisser si tu gardes d'autres CDN) -->
-    
 
     <!-- 🏷️ Métadonnées de base -->
     <meta charset="utf-8" />
@@ -13,46 +12,50 @@
     />
     <meta name="author" content="Nataly MOLINA" />
     <title>Portfolio Nataly Molina</title>
-
+    <link
+      rel="preload"
+      as="image"
+      href="images/home-564.webp"
+      type="image/webp"
+    />
     <!-- 🎨 Feuille de style principale -->
-     <style>
-    body {
-      font-family: "Orbitron", sans-serif;
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+      body {
+        font-family: "Orbitron", sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+      }
 
-    .hero_title,
-    .hero_desc,
-    .hero_text {
-      color: #1d3c35;
-      font-family: "Orbitron", sans-serif;
-    }
+      .hero_title,
+      .hero_desc,
+      .hero_text {
+        color: #1d3c35;
+        font-family: "Orbitron", sans-serif;
+      }
 
-    .hero_title {
-      font-size: 3.2rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
+      .hero_title {
+        font-size: 3.2rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
 
-    .hero_title .name-highlight {
-      font-weight: 700;
-      font-size: 4.2rem;
-      color: #317873;
-    }
+      .hero_title .name-highlight {
+        font-weight: 700;
+        font-size: 4.2rem;
+        color: #317873;
+      }
 
-    .imageHome {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 1;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+      .imageHome {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
     <link rel="stylesheet" href="style.min.css" />
-    
 
     <!-- 🧱 Bootstrap & FontAwesome différés -->
     <link
@@ -133,29 +136,31 @@
             </h2>
           </div>
 
-       <!-- Image -->
-<div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0">
-  <picture>
-    <source
-      srcset="
-        images/home-300.webp 300w,
-        images/home-564.webp 564w,
-        images/home-800.webp 800w
-      "
-      sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
-      type="image/webp"
-    />
-    <img
-      src="images/home-800.webp"
-      width="800"
-      height="800"
-      alt="Photo de testeur"
-      class="imageHome"
-      loading="eager"
-      fetchpriority="high"
-    />
-  </picture>
-</div>
+          <!-- Image -->
+          <div
+            class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
+          >
+            <picture>
+              <source
+                srcset="
+                  images/home-300.webp 300w,
+                  images/home-564.webp 564w,
+                  images/home-800.webp 800w
+                "
+                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+                type="image/webp"
+              />
+              <img
+                src="images/home-800.webp"
+                width="800"
+                height="800"
+                alt="Photo de testeur"
+                class="imageHome"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
 
           <!-- Texte & bouton -->
           <div class="col-12 col-lg-6 px-4 text-lg-start text-centre">
