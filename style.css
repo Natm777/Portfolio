@@ -163,7 +163,9 @@
   width: 100%;
   max-width: 450px;
   height: auto;
+  aspect-ratio: 1 / 1; /* ✅ Réserve une hauteur */
   object-fit: contain;
+  display: block;
   margin-left: 0rem;
   margin-right: 3rem;
   margin-top: 2rem;
@@ -526,7 +528,8 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Réduction de la taille de la bannière */
   .bgimage {
-    height: auto;
+     /* width: auto; */
+    height: 750px;
     padding: 4rem 0;
   }
 
