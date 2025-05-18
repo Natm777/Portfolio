@@ -135,7 +135,7 @@ function createPortfolioFromJSON() {
   fetch("data/portfolio.json")
     .then((response) => response.json())
     .then((data) => {
-      const isDesktop = window.innerWidth >= 540;
+      const isDesktop = window.innerWidth >= 992;
 
       if (isDesktop) {
         document.getElementById("portfolioCarousel").classList.remove("d-none");
@@ -163,7 +163,7 @@ function createPortfolioFromJSON() {
                   <p>${item.text}</p>
                   <a href="${
                     item.link
-                  }" class="btn btn-success mt-2" target="_blank">Voir le projet</a>
+                  }" class="btn btn-success mt-2" target="_blank">Voir GitHub <i class="fab fa-github me-2"></i></a>
                 </div>
                 <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Diapositive précédente">
                   &#8249;
@@ -183,7 +183,7 @@ function createPortfolioFromJSON() {
         data.forEach((item) => {
           const baseImage = item.image.replace(".webp", "");
           const card = document.createElement("div");
-          card.className = "col-12 col-md-4 mb-4";
+          card.className = "col-12 col-sm-6 col-md-4 mb-4";
           card.innerHTML = `
       <div class="card portfolioContent h-100">
         <img src="images/${baseImage}-640.webp" class="card-img-top" alt="${
@@ -194,7 +194,7 @@ function createPortfolioFromJSON() {
           <p>${item.text}</p>
           <a href="${
             item.link
-          }" class="btn btn-outline-light mt-2" target="_blank">Voir</a>
+          }" class="btn btn-outline-light mt-2" target="_blank">Voir GitHub <i class="fab fa-github me-2"></i></a>
         </div>
       </div>`;
           cardsContainer.appendChild(card);
