@@ -94,12 +94,20 @@
             class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
           >
             <img
-              src="images/home-564.webp"
-              alt="Photo de testeur"
-              class="img-fluid imageHome"
-              
-            />
-          </div>
+    src="images/home.webp"
+    srcset="
+      images/home-300.webp 300w,
+      images/home-564.webp 564w,
+      images/home-564.webp 564w
+    "
+    sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+    alt="Photo de testeur"
+    class=" imageHome"
+    width="800"
+    height="800"
+    loading="lazy"
+  />
+</div>
 
           <!-- Texte & bouton -->
           <div class="col-12 col-lg-6 px-4 text-lg-start text-centre">
