@@ -12,7 +12,13 @@
     />
     <meta name="author" content="Nataly MOLINA" />
     <title>Portfolio Nataly Molina</title>
-    <link rel="preload" href="images/home-800.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      href="images/home-800.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
     <!-- 🎨 Feuille de style principale -->
     <style>
       body {
@@ -53,20 +59,25 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- 🧱 Bootstrap & FontAwesome différés -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="css/bootstrap.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+    </noscript>
+
+   <!-- ✅ FontAwesome local différé -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+
   </head>
 
   <body>
     <!-- navbar -->
 
-    <nav
-      class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll"
-    >
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
       <div class="container">
         <a class="navbar-brand text-white logo-tech" href="#">
           <span class="initials">[N|M]</span>
@@ -131,7 +142,7 @@
                   images/home-564.webp 564w,
                   images/home-800.webp 800w
                 "
-                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+                sizes="(max-width: 576px) 300px, (max-width: 992px) 300px, 564px, 800px"
                 type="image/webp"
               />
               <img
