@@ -146,13 +146,12 @@
 
 .imageHome {
   width: 100%;
-  max-width: 450px;
+  max-width: 450px; /* OK pour desktop */
   height: auto;
-  aspect-ratio: 1 / 1; /* ✅ Réserve une hauteur */
+  aspect-ratio: 1 / 1; /* ✅ Réserve la hauteur */
   object-fit: contain;
   display: block;
-  margin-left: 0rem;
-  margin-right: 3rem;
+  margin-inline: auto; /* Simplifie margin-left + right */
   margin-top: 2rem;
   margin-bottom: 0;
 }
@@ -547,11 +546,7 @@
   }
 
   /* Image plus petite */
-  .imageHome {
-    max-width: 350px;
-    margin: 2rem auto;
-    display: block;
-  }
+
 
   /* Bouton CV */
   .hero_text .btn {
@@ -656,6 +651,9 @@
     height: auto !important;
     padding-bottom: 2rem;
     padding-top: 3rem;
+  }
+   .imageHome {
+    max-width: 300px;
   }
   #skills .text-center {
     margin-top: 2.5rem !important;

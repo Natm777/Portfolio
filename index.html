@@ -14,8 +14,8 @@
     <title>Portfolio Nataly Molina</title>
     <link
       rel="preload"
-      href="images/home-300.webp"
       as="image"
+      href="images/home-800.webp"
       type="image/webp"
       fetchpriority="high"
     />
@@ -137,21 +137,23 @@
           >
             <picture>
               <source
-                srcset="
-                  images/home-300.webp 300w,
-                  images/home-564.webp 564w,
-                  images/home-800.webp 800w
-                "
-                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+                srcset="images/home-300.webp"
+                media="(max-width: 576px)"
                 type="image/webp"
               />
-               <img
+              <source
+                srcset="images/home-564.webp"
+                media="(max-width: 992px)"
+                type="image/webp"
+              />
+              <img
                 src="images/home-800.webp"
-                alt="Photo de testeur logiciel"
                 width="800"
                 height="800"
+                alt="Photo de testeur logiciel"
                 class="imageHome"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
               />
             </picture>
