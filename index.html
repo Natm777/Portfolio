@@ -49,11 +49,18 @@
 
       .imageHome {
         width: 100%;
+        max-width: 300px; /* Ajusté à ta taille max réelle */
         height: auto;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1 / 1; /* Pour bloquer la hauteur */
         object-fit: contain;
         display: block;
-        margin: 0 auto;
+        margin: 2rem auto 0 auto;
+      }
+      .image-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px; /* Empêche le collapse du conteneur */
       }
     </style>
     <link rel="stylesheet" href="orbitron.css" />
@@ -140,23 +147,22 @@
           </div>
 
           <!-- Image -->
-          <div
-            class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
-          >
+          <div class="col-12 col-lg-6 image-col">
             <picture>
               <source
                 srcset="
                   images/home-300.webp 300w,
+                  images/home-400.webp 400w,
                   images/home-480.webp 480w,
                   images/home-564.webp 564w
                 "
-                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 480px"
+                sizes="(max-width: 576px) 300px, (max-width: 992px) 400px, 480px"
                 type="image/webp"
               />
               <img
-                src="images/home-480.webp"
-                width="480"
-                height="480"
+                src="images/home-300.webp"
+                width="300"
+                height="300"
                 alt="Photo de testeur logiciel"
                 class="imageHome"
                 loading="eager"
