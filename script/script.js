@@ -214,8 +214,8 @@ function moveCarousel(direction) {
 
 // Rafraîchit portfolio à chaque redimensionnement
 window.addEventListener("resize", () => {
-  createPortfolioFromJSON();
   reloadResponsiveImages();
+  createPortfolioFromJSON();
 });
 
 // Appels initiaux
