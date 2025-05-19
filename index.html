@@ -12,7 +12,7 @@
     />
     <meta name="author" content="Nataly MOLINA" />
     <title>Portfolio Nataly Molina</title>
-    
+   
     <!-- 🎨 Feuille de style principale -->
     <style>
       body {
@@ -63,9 +63,8 @@
       <link rel="stylesheet" href="css/bootstrap.min.css" />
     </noscript>
 
-   <!-- ✅ FontAwesome local différé -->
+    <!-- ✅ FontAwesome local différé -->
     <link rel="stylesheet" href="css/fontawesome.min.css" />
-
   </head>
 
   <body>
@@ -129,7 +128,26 @@
           <div
             class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
           >
-            
+            <picture>
+              <source
+                srcset="
+                  images/home-300.webp 300w,
+                  images/home-564.webp 564w,
+                  images/home-800.webp 800w
+                "
+                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 800px"
+                type="image/webp"
+              />
+              <img
+                src="images/home-800.webp"
+                alt="Photo de testeur logiciel"
+                width="800"
+                height="800"
+                class="imageHome"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <!-- Texte & bouton -->
