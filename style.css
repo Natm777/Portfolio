@@ -144,18 +144,17 @@
   margin-bottom: 0;
 }
 
+
+
 .imageHome {
   width: 100%;
-  max-width: 450px; /* OK pour desktop */
+  max-width: 450px;
   height: auto;
-  aspect-ratio: 1 / 1; /* ✅ Réserve la hauteur */
+  aspect-ratio: 1 / 1; /* Important pour réserver l’espace */
   object-fit: contain;
   display: block;
-  margin-inline: auto; /* Simplifie margin-left + right */
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin: 2rem auto 0 auto; /* Centré proprement */
 }
-
 /* ******* Bouton CV ******* */
 .button {
   display: flex;
