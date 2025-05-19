@@ -165,10 +165,10 @@ function createPortfolioFromJSON() {
                     item.link
                   }" class="btn btn-success mt-2" target="_blank">Voir GitHub <i class="fab fa-github me-2"></i></a>
                 </div>
-                <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Diapositive précédente">
+                <button class="carousel-btn prev" onclick="moveCarousel(1)" aria-label="Diapositive précédente">
                   &#8249;
                 </button>
-                <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Diapositive suivante">
+                <button class="carousel-btn next" onclick="moveCarousel(-1)" aria-label="Diapositive suivante">
                   &#8250;
                 </button>
               </div>
