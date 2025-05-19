@@ -12,7 +12,13 @@
     />
     <meta name="author" content="Nataly MOLINA" />
     <title>Portfolio Nataly Molina</title>
-    
+    <link
+      rel="preload"
+      as="image"
+      href="images/home-300.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
     <!-- 🎨 Feuille de style principale -->
     <style>
       body {
@@ -43,7 +49,6 @@
 
       .imageHome {
         width: 100%;
-        max-width: 480px;
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: contain;
@@ -142,11 +147,10 @@
               <source
                 srcset="
                   images/home-300.webp 300w,
-                  images/home-400.webp 400w,
                   images/home-480.webp 480w,
                   images/home-564.webp 564w
                 "
-                sizes="(max-width: 576px) 300px, (max-width: 992px) 400px, 480px"
+                sizes="(max-width: 576px) 300px, (max-width: 992px) 564px, 480px"
                 type="image/webp"
               />
               <img
