@@ -92,7 +92,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  background: linear-gradient(135deg, #fefefe, #f3f7f5);
+  background: white;
 }
 
 .px-5 {
