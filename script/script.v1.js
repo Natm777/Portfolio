@@ -44,9 +44,8 @@ function createSkillsFromJSON() {
           <div class="card skillsText" data-category="${item.category}">
             <div class="card-body">
               <img 
-              src="./images/${item.image.replace('.webp', '-400.webp')}"
+              src="./images/${item.image.replace('.webp', '-1024.webp')}"
               srcset="
-              ./images/${item.image.replace('.webp', '-200.webp')} 200w,
               ./images/${item.image.replace('.webp', '-400.webp')} 400w,
               ./images/${item.image.replace('.webp', '-600.webp')} 600w"
                 sizes="(max-width: 576px) 200px, (max-width: 992px) 400px, 600px"
