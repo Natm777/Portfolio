@@ -1,50 +1,50 @@
 [
     {
-        "image": "html-css.webp",
+        "image": "html-css.v1.webp",
         "title": "HTML - CSS",
         "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS",
         "category": "developpement"
     },
     {
-        "image": "js.webp",
+        "image": "js.v1.webp",
         "title": "JavaScript",
         "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires",
         "category": "developpement"
     },
     {
-        "image": "react.webp",
+        "image": "react.v1.webp",
         "title": "React",
         "text": "Création d’applications React, création de composants et manipulation de leur état",
         "category": "developpement"
     },
     
     {
-        "image": "exploratoire.webp",
+        "image": "exploratoire.v1.webp",
         "title": "Exécution des tests",
         "text": "Réalisation de tests fonctionnels manuels, exploratoires et de non régression.",
         "category": "test"
     },
     
     {
-        "image": "testr.webp",
+        "image": "testr.v1.webp",
         "title": "Documentation de test",
         "text": "Rédaction de livrables QA : cahier de recette, bilan de campagne et revue d’exigences.",
         "category": "test"
     },
     {
-        "image": "cypress.webp",
+        "image": "cypress.v1.webp",
         "title": "Cypress",
         "text": "Automatisation de tests end-to-end sur interfaces web.",
         "category": "test"
     },
     {
-        "image": "cucumber.webp",
+        "image": "cucumber.v1.webp",
         "title": "Cucumber",
         "text": "Définition de scénarios de test BDD avec Gherkin.",
         "category": "test"
     },
     {
-        "image": "outils.webp",
+        "image": "outils.v1.webp",
         "title": "Outils projet",
         "text": "Utilisation de Git, Figma, Jira et Notion pour la gestion, la version et la collaboration en QA.",
         "category": "outils"

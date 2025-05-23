@@ -44,11 +44,11 @@ function createSkillsFromJSON() {
           <div class="card skillsText" data-category="${item.category}">
             <div class="card-body">
               <img 
-                src="./images/${item.image.replace(".webp", "-400.webp")}" 
-                srcset="
-                  ./images/${item.image.replace(".webp", "-200.webp")} 200w,
-                  ./images/${item.image.replace(".webp", "-400.webp")} 400w,
-                  ./images/${item.image.replace(".webp", "-600.webp")} 600w"
+              src="./images/${item.image.replace('.webp', '-400.webp')}"
+              srcset="
+              ./images/${item.image.replace('.webp', '-200.webp')} 200w,
+              ./images/${item.image.replace('.webp', '-400.webp')} 400w,
+              ./images/${item.image.replace('.webp', '-600.webp')} 600w"
                 sizes="(max-width: 576px) 200px, (max-width: 992px) 400px, 600px"
                 alt="${item.title}" 
                 loading="lazy" />
@@ -142,7 +142,7 @@ function createPortfolioFromJSON() {
         cardsContainer.classList.add("d-none");
 
         data.forEach((item, index) => {
-          const baseImage = item.image.replace(".webp", "");
+          const baseImage = item.image.replace(".webp", ".v1");
           const carouselItem = document.createElement("div");
           carouselItem.classList.add("carousel-item");
           if (index === 0) carouselItem.classList.add("active");
@@ -181,7 +181,7 @@ function createPortfolioFromJSON() {
         cardsContainer.innerHTML = ""; // ✅ Nettoyage
 
         data.forEach((item) => {
-          const baseImage = item.image.replace(".webp", "");
+          const baseImage = item.image.replace(".webp", ".v1");
           const card = document.createElement("div");
           card.className = "col-12 col-sm-6 col-md-4 mb-4";
           card.innerHTML = `
