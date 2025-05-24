@@ -18,50 +18,9 @@
       type="image/webp"
       fetchpriority="high"
     />
+    <link rel="preload" href="webfonts/Orbitron-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="webfonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     <!-- 🎨 Feuille de style principale -->
-    <style>
-      body {
-        font-family: orbitron, sans-serif;
-        background-color: #fff;
-        margin: 0;
-        padding: 0;
-      }
-
-      .hero_title,
-      .hero_desc,
-      .hero_text {
-        color: #1d3c35;
-        font-family: Orbitron, sans-serif;
-      }
-
-      .hero_title {
-        font-size: 3.2rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-      }
-
-      .hero_title .name-highlight {
-        font-weight: 700;
-        font-size: 3.2rem;
-        color: #317873;
-      }
-
-      .imageHome {
-        width: 100%;
-        max-width: 300px; /* Ajusté à ta taille max réelle */
-        height: auto;
-        aspect-ratio: 1 / 1; /* Pour bloquer la hauteur */
-        object-fit: contain;
-        display: block;
-        margin: 2rem auto 0 auto;
-      }
-      .image-col {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 300px; /* Empêche le collapse du conteneur */
-      }
-    </style>
     <link rel="stylesheet" href="style.v1.css" />
 
     <!-- 🧱 Bootstrap & FontAwesome différés -->
@@ -121,50 +80,14 @@
 
     <!-- main banner -->
     <section class="bgimage py-5" id="home">
-      <div class="container">
-        <div class="row align-items-center pt-5 pt-lg-0">
-          <!-- Titre & sous-titre -->
-          <div
-            class="col-12 col-lg-6 px-4 mb-4 mb-lg-0 text-lg-start text-centre"
-            style="min-height: auto"
-          >
-            <h1 class="hero_title mb-3">
-              Salut, moi c’est <span class="name-highlight">Nataly</span>
-            </h1>
-            <h2 class="hero_desc">
-              Je suis <span class="color-accent">testeuse logiciel</span>
-            </h2>
-          </div>
-
-          <!-- Image -->
-          <div class="col-12 col-lg-6 image-col">
-            <picture>
-              <source
-                srcset="
-                  images/home-300.v1.webp 300w,
-                  images/home-400.v1.webp 400w,
-                  images/home-480.v1.webp 480w,
-                  images/home-564.v1.webp 564w
-                "
-                sizes="(max-width: 576px) 300px, (max-width: 992px) 400px, 480px"
-                type="image/webp"
-              />
-              <img
-                src="images/home-300.v1.webp"
-                width="300"
-                height="300"
-                alt="Photo de testeur logiciel"
-                class="imageHome"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
-
-          <!-- Texte & bouton -->
-          <div class="col-12 col-lg-6 px-4 text-lg-start text-centre">
-            <p class="hero_text">
+  <div class="container">
+    <div class="row align-items-center pt-5 pt-lg-0">
+      <div class="col-12 col-lg-6 px-4 text-lg-start text-center">
+        <h1 class="hero_title mb-3">
+          Salut, moi c’est <span class="name-highlight">Nataly</span>
+        </h1>
+        <h2 class="hero_desc">Je suis <span class="color-accent">testeuse logiciel</span></h2>
+        <p class="hero_text">
               Actuellement en alternance dans le domaine du test logiciel, je
               renforce mes compétences en
               <span class="highlight">assurance qualité</span>, tout en évoluant
@@ -178,11 +101,10 @@
               >
                 Télécharger mon CV !
               </a>
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- skills section-->
     <section id="skills">
