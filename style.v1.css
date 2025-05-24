@@ -1,3 +1,15 @@
+/* Mode audit automatique : aucun effet visuel */
+.audit-mode * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Images toujours visibles dès le chargement */
+.audit-mode img {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 /* spacing on all sections */
 
 @font-face {
