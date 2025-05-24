@@ -5,7 +5,7 @@
   src: url('webfonts/Orbitron-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+    font-display: optional;
 }
 @font-face {
   font-family: 'Poppins';
@@ -13,9 +13,21 @@
        url('../webfonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+   font-display: optional;
 }
-
+.audit-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Orbitron', sans-serif;
+}
+.layout-ghost {
+  visibility: hidden;
+  pointer-events: none;
+  height: 175px; /* ajuste selon ton design */
+  margin-bottom: -175px; /* compense la hauteur */
+}
 #skills,
 #portfolio,
 #contact {
