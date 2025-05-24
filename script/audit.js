@@ -27,3 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// Bloque les changements DOM après load (méthode de ninja)
+window.addEventListener('load', () => {
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(m => {
+      if (m.target instanceof HTMLElement) {
+        m.target.style.transition = "none";
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    childList: true,
+    subtree: true
+  });
+});
