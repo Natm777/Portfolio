@@ -1,6 +1,8 @@
+/* Ce bloc masque les stabilisateurs CLS */
 section.bgimage > div[style*="opacity:0"],
 .col-12.col-lg-6.text-centre > div[style*="opacity:0"] {
   display: block !important;
+  height: auto !important;
   visibility: hidden !important;
 }
 /* spacing on all sections */
