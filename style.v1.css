@@ -4,11 +4,7 @@
   src: url('webfonts/Orbitron-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-<<<<<<< HEAD
   font-display: swap;
-=======
-    font-display: swap;
->>>>>>> 7c84d296c4a019864289e839274e6ad0577a21f3
 }
 
 @font-face {
@@ -16,13 +12,8 @@
   src: url('webfonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-<<<<<<< HEAD
   font-display: swap;
-=======
-   font-display: swap;
->>>>>>> 7c84d296c4a019864289e839274e6ad0577a21f3
 }
-
 #skills,
 #portfolio,
 #contact {
