@@ -87,7 +87,7 @@
 .bgimage {
   position: relative;
   height: 100vh;
-  background: url('/Portfolio/images/home.jpg') no-repeat center center;
+  background: url('../images/home.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
