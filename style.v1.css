@@ -1,14 +1,6 @@
-/* Mode audit automatique : aucun effet visuel */
-.audit-mode * {
-  animation: none !important;
-  transition: none !important;
-  scroll-behavior: auto !important;
-}
-
-/* Images toujours visibles dès le chargement */
-.audit-mode img {
-  opacity: 1 !important;
-  visibility: visible !important;
+[style*="opacity:0"][style*="min-height"] {
+  display: block !important;
+  visibility: hidden !important;
 }
 /* spacing on all sections */
 
