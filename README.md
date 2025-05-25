@@ -58,14 +58,7 @@ Ce portfolio a été réalisé dans le cadre du projet **OpenClassrooms "Créez 
 
 ### 👤 Profil
 
-Développeur spécialisé en **qualité logicielle** & **tests fonctionnels**, j’utilise mes compétences pour garantir des produits stables, accessibles et performants. Ce site présente mon parcours, mes projets, et ma capacité à maintenir un site conforme aux standards actuels.
-
----
-
-### 📦 Déploiement
-
-Le site est publié via **GitHub Pages** :  
-🔗 `https://votre-nom-utilisateur.github.io/nom-du-repo/`
+Spécialiste en **qualité logicielle** & **tests fonctionnels**, j’utilise mes compétences pour garantir des produits stables, accessibles et performants. Ce site présente mon parcours, mes projets, et ma capacité à maintenir un site conforme aux standards actuels.
 
 ---
 
@@ -73,8 +66,6 @@ Le site est publié via **GitHub Pages** :
 
 - 💬 Ajouter une section blog ou actualités QA.
 - 📧 Intégrer un formulaire de contact via EmailJS.
-- 🧪 Ajouter un espace dédié à la **documentation de test** ou **plans de recette**.
-
 ---
 
 ## 📬 Contact
