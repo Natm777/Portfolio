@@ -9,7 +9,6 @@
 ## 🌐 Aperçu en ligne
 
 👉 [Accéder au Portfolio](https://natm777.github.io/Portfolio/#home)  
-🔗 *Ce site est hébergé gratuitement grâce à GitHub Pages.*
 
 ---
 
