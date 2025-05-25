@@ -501,18 +501,7 @@
   flex: 1;
 }
 
-.scroll-top {
-  position: absolute;
-  right: 1.5rem;
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
 
-.scroll-top:hover {
-  transform: translateY(-5px);
-  color: #198754;
-}
 
 /* ******* MEDIA QUERIES ******* */
 @media (max-width: 420px) {
