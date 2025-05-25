@@ -2,7 +2,7 @@
 
 <html lang="fr">
   <head>
-    <!-- 🏷️ Métadonnées de base -->
+    <!-- Métadonnées de base pour l'encodage, l'affichage responsive et l'identité du site -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -11,6 +11,8 @@
     />
     <meta name="author" content="Nataly MOLINA" />
     <title>Portfolio Nataly Molina</title>
+
+    <!-- Déclaration des favicons pour différents formats -->
     <link
       rel="icon"
       type="image/png"
@@ -23,6 +25,8 @@
       sizes="32x32"
       href="/Portfolio/favicon-32x32.png"
     />
+
+    <!-- Préchargement des polices personnalisées pour améliorer les performances -->
     <link
       rel="preload"
       href="webfonts/Orbitron-Regular.ttf"
@@ -37,10 +41,11 @@
       type="font/ttf"
       crossorigin="anonymous"
     />
-    <!-- 🎨 Feuille de style principale -->
+
+    <!-- Feuille de style principale du site -->
     <link rel="stylesheet" href="style.v1.css" />
 
-    <!-- 🧱 Bootstrap & FontAwesome différés -->
+    <!-- Chargement différé de Bootstrap pour optimiser le rendu, avec fallback pour les utilisateurs sans JavaScript -->
     <link
       rel="stylesheet"
       href="css/bootstrap.min.v1.css"
@@ -51,7 +56,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.v1.css" />
     </noscript>
 
-    <!-- ✅ Icônes Fontello -->
+    <!-- Feuille de style pour les icônes Fontello -->
     <link rel="stylesheet" href="css/fontello.css" />
   </head>
 
@@ -103,12 +108,15 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8 px-4">
+            <!-- Titre principal avec mise en avant du prénom -->
             <h1 class="hero_title mb-3">
               Salut, moi c’est <span class="name-highlight">Nataly</span>
             </h1>
+            <!-- Sous-titre présentant le métier -->
             <h2 class="hero_desc">
               Je suis <span class="color-accent">testeuse logiciel</span>
             </h2>
+            <!-- Texte de présentation avec mise en valeur des compétences et contexte professionnel -->
             <p class="hero_text">
               Actuellement en alternance dans le domaine du test logiciel 🔁🐞,
               je renforce mes compétences en
@@ -116,6 +124,7 @@
               évoluant dans des
               <span class="highlight">environnements professionnels </span>
               concrets et <span class="highlight">exigeants. </span> <br />
+              <!-- Bouton pour télécharger le CV, ouverture dans un nouvel onglet -->
               <a
                 href="images/CV_MOLINA_Nataly.png"
                 target="_blank"
@@ -131,9 +140,12 @@
     </section>
 
     <!-- skills section-->
+
     <section id="skills">
       <div class="container">
+        <!-- Titre centré de la section compétences -->
         <h2 class="text-center">Mes compétences</h2>
+        <!-- Zone destinée à accueillir dynamiquement les boutons de filtre pour les compétences -->
         <div id="filter-buttons" class="mt-4 mb-4"></div>
       </div>
     </section>
@@ -164,13 +176,16 @@
     <!-- contact section -->
     <section id="contact">
       <div class="container mt-3 contactContent">
+        <!-- Titre centré de la section contact -->
         <h2 class="text-center">Contactez-moi</h2>
         <div class="row">
+          <!-- Colonne affichant le numéro de téléphone -->
           <div class="col-lg-4 mt-4 contactColumn">
             <i class="icon-phone" aria-hidden="true"></i>
             <h3>Téléphone</h3>
             <p>07 69 62 99 89</p>
           </div>
+          <!-- Colonne affichant l'adresse email avec lien cliquable -->
           <div class="col-lg-4 mt-4 contactColumn">
             <i class="icon-mail" aria-hidden="true"></i>
             <h3>Adresse email</h3>
@@ -178,12 +193,13 @@
               <a href="mailto:namoal.pro@gmail.com">namoal.pro@gmail.com</a>
             </p>
           </div>
+          <!-- Colonne affichant le profil LinkedIn avec lien sécurisé ouvrant dans un nouvel onglet -->
           <div class="col-lg-4 mt-4 contactColumn">
             <i class="icon-linkedin" aria-hidden="true"></i>
             <h3>LinkedIn</h3>
             <p>
               <a
-                href="https://www.linkedin.com/in/ton-nom-utilisateur/"
+                href="https://www.linkedin.com/in/nataly-m-a62156146/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -199,12 +215,13 @@
     <footer class="footer-custom">
       <div class="container-footer">
         <p class="footer-text">© 2025 Nataly Molina. Tous droits réservés.</p>
-        
       </div>
     </footer>
 
     <!-- scripts -->
+    <!-- Inclusion de la bibliothèque Bootstrap pour les composants interactifs et le responsive -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Inclusion du script JavaScript personnalisé, chargé de façon asynchrone et différée pour optimiser les performances -->
     <script src="script/script.v1.js" async defer></script>
   </body>
 </html>
