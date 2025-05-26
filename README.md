@@ -44,7 +44,6 @@ Ce portfolio a été réalisé dans le cadre du projet **OpenClassrooms "Créez 
 
 - ❌ Icônes Font Awesome non affichées → 📦 Chargement corrigé via CDN local ou lien correct.
 - ❌ Éléments dynamiques invisibles → ✅ Résolution via `JavaScript` et ordres de chargement.
-- ❌ Bugs de responsive → ✅ Fixés via classes Bootstrap adaptées.
 
 ### 🚀 Optimisations apportées :
 
@@ -65,7 +64,6 @@ Spécialiste en **qualité logicielle** & **tests fonctionnels**, j’utilise me
 ## 📈 Améliorations possibles
 
 - 💬 Ajouter une section blog ou actualités QA.
-- 📧 Intégrer un formulaire de contact via EmailJS.
 ---
 
 ## 📬 Contact
@@ -76,5 +74,5 @@ Spécialiste en **qualité logicielle** & **tests fonctionnels**, j’utilise me
 
 ---
 
-> 🛡️ Ce projet est le reflet de mon engagement pour la **qualité logicielle**, l’**accessibilité web** et la **rigueur professionnelle**.
+
 
