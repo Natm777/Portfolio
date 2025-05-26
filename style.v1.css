@@ -368,7 +368,7 @@
   position: relative;
   width: 100%;
   max-width: 1024px;
-  aspect-ratio: 16 / 5; /* équivalent à 1600/500 ou 1024/320 */
+  aspect-ratio: 16 / 5; 
   overflow: hidden;
   margin: 0 auto;
 }
