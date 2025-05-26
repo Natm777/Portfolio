@@ -1,11 +1,5 @@
 # 🎯 Portfolio Testeur Logiciel QA - Nataly MOLINA
 
-![Badge](https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Badge](https://img.shields.io/badge/CSS3-%231572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Badge](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Badge](https://img.shields.io/badge/Accessibility-WCAG-brightgreen?style=for-the-badge)
-
 ## 🌐 Aperçu en ligne
 
 👉 [Accéder au Portfolio](https://natm777.github.io/Portfolio/#home)  
@@ -48,7 +42,6 @@ Ce portfolio a été réalisé dans le cadre du projet **OpenClassrooms "Créez 
 ### 🚀 Optimisations apportées :
 
 - 📸 Compression & chargement progressif des images (`WebP`, `lazyload`, `srcset`).
-- 🎨 Amélioration des contrastes (conformité RGAA/WCAG).
 - 🧭 Réorganisation des balises `<h1>` à `<h6>` pour un meilleur SEO et accessibilité.
 
 ---
