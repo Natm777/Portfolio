@@ -9,7 +9,7 @@
   {
     "image": "sophie-bluel-main.webp",
     "title": "Sophie Bluel – Site d'architecte",
-    "text": "Développement d’une site  dynamique avec JavaScript, incluant une page de connexion admin et une modale d’upload média. Manipulation du DOM, gestion des événements et communication avec une API.",
+    "text": "Développement d’un site dynamique avec JavaScript : page admin, modale d’upload, manipulation du DOM, événements et API.",
     "link": "https://github.com/Natm777/sophie-bluel",
     "technos": "HTML5, CSS3, JavaScript, API, DOM"
   },

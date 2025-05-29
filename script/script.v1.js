@@ -37,9 +37,9 @@ function createSkillsFromJSON() {
 
       data.forEach((item) => {
         // Parcourt chaque compétence du fichier JSON
-        categories.add(item.category); // Ajoute la catégorie de la compétence à l'ensemble des catégories
+        categories.add(item.category); // Ajoute la catégorie de la compétence à l'ensemble des catégories dans notre Set.
 
-        const col = document.createElement("div"); // Crée une nouvelle colonne Bootstrap
+        const col = document.createElement("div"); // Crée une nouvelle card conteneur Bootstrap
         col.classList.add("col-lg-4", "mt-4"); // Ajoute les classes de mise en page
 
         col.innerHTML = `
@@ -59,14 +59,14 @@ function createSkillsFromJSON() {
           </div>
         `; // Définit le contenu HTML de la carte de compétence
 
-        allCards.push(col); // Ajoute la carte au tableau des cartes
+        allCards.push(col); // Ajoute la carte au contenur des cartes => allCards []
       });
 
-      // Création des boutons de filtre pour chaque catégorie
+      // Création des boutons de filtre pour chaque catégorie, on commence par le bouton "Tout"
       let btns = `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Tout</button>`;
       categories.forEach((cat) => {
         const label = cat.charAt(0).toUpperCase() + cat.slice(1); // Met la première lettre en majuscule
-        btns += `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="${cat}">${label}</button>`;
+        btns += `<button class="btn btn-outline-primary mx-2 filter-btn" data-filter="${cat}">${label}</button>`; // Crée un bouton pour chaque catégorie
       });
       filterContainer.innerHTML = btns; // Ajoute les boutons de filtre dans le DOM
 
@@ -97,11 +97,11 @@ function createSkillsFromJSON() {
 
           if (filter === "all" || category === filter) {
             // Vérifie si la carte doit être affichée selon le filtre
-            newRow.appendChild(col.cloneNode(true)); // Ajoute la carte à la ligne
+            newRow.appendChild(col.cloneNode(true)); // Ajoute la carte à la ligne et on duplique la carte, sinon elle disparaîtrait de allCards
             count++;
 
             if (count % 3 === 0) {
-              // Si trois cartes sont ajoutées, on crée une nouvelle ligne
+              // Dès qu'on a trois cartes dans la ligne on l'insére dans le DOM & on crée une nouvelle ligne
               container.appendChild(newRow);
               newRow = document.createElement("div");
               newRow.classList.add("row");
@@ -164,7 +164,7 @@ function createPortfolioFromJSON() {
           // Crée un nouvel élément de carrousel Bootstrap
           const carouselItem = document.createElement("div");
           carouselItem.classList.add("carousel-item");
-          // Active la première diapositive du carrousel
+          // Le premier élément du carrousel reçoit la classe active.
           if (index === 0) carouselItem.classList.add("active");
 
           // Définit le contenu HTML de l'élément du carrousel avec image, titre, description et boutons
